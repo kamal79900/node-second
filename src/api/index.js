@@ -1,0 +1,31 @@
+const express = require('express')
+
+const userRoute = require('./routes/userRoute')
+const meetingRoute = require('./routes/meetingRoute')
+const membershipRoute = require('./routes/membershipRoute')
+const plansRoute = require('./routes/plansRoute')
+const contactSalesRoute = require('./routes/contactSalesRoute')
+const paymentRoute = require('./routes/paymentRoute')
+const privacyPolicyRoute = require('./routes/privacyPolicyRoute')
+const ticketRoute = require('./routes/ticketRoute')
+const faqsRoute = require('./routes/FAQsRoute')
+const testimonialRoute = require('./routes/testimonialRoute')
+const termsOfServiceRoute = require('./routes/termsOfServiceRoute')
+const userPositionRoute = require('./routes/userPositionRoute')
+
+const apiRouter = express.Router()
+
+apiRouter.use('/users', userRoute)
+apiRouter.use('/meetings', meetingRoute)
+apiRouter.use('/memberships', membershipRoute)
+apiRouter.use('/plans', plansRoute)
+apiRouter.use('/contacts', contactSalesRoute)
+apiRouter.use('/payments', paymentRoute)
+apiRouter.use('/privacyPolicy', privacyPolicyRoute)
+apiRouter.use('/tickets', ticketRoute)
+apiRouter.use('/FAQs', faqsRoute)
+apiRouter.use('/testimonials', testimonialRoute)
+apiRouter.use('/termsOfServices', termsOfServiceRoute)
+apiRouter.use('/userPositions', userPositionRoute)
+
+module.exports = apiRouter
